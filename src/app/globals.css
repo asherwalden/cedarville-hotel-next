@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+:root {
+  /* Brand Colors — Cedarville Hotel / Les Cheneaux Colorway */
+  --ch-primary: #2B5F83;
+  --ch-primary-dark: #1B3D54;
+  --ch-secondary: #4A8C6F;
+  --ch-accent: #D4A84B;
+  --ch-accent-hover: #C09438;
+
+  /* Text */
+  --ch-dark: #2C2C2C;
+  --ch-heading: #1B3D54;
+  --ch-gray: #6B7280;
+  --ch-gray-light: #E5E7EB;
+
+  /* Backgrounds */
+  --ch-bg-main: #F9F7F4;
+  --ch-bg-alt: #EBE6DE;
+  --ch-white: #FFFFFF;
+}
+
+@theme inline {
+  --color-ch-primary: var(--ch-primary);
+  --color-ch-primary-dark: var(--ch-primary-dark);
+  --color-ch-secondary: var(--ch-secondary);
+  --color-ch-accent: var(--ch-accent);
+  --color-ch-accent-hover: var(--ch-accent-hover);
+  --color-ch-dark: var(--ch-dark);
+  --color-ch-heading: var(--ch-heading);
+  --color-ch-gray: var(--ch-gray);
+  --color-ch-gray-light: var(--ch-gray-light);
+  --color-ch-bg-main: var(--ch-bg-main);
+  --color-ch-bg-alt: var(--ch-bg-alt);
+  --color-ch-white: var(--ch-white);
+  --font-heading: var(--font-playfair);
+  --font-body: var(--font-inter);
+}
+
+body {
+  background-color: var(--ch-bg-main);
+  color: var(--ch-dark);
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--ch-accent);
+  color: var(--ch-primary-dark);
+}
+
+/* Screen reader only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
