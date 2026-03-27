@@ -1,7 +1,9 @@
 import { createClient } from "next-sanity";
 import { apiVersion, dataset, projectId } from "./env";
 
-export const client = projectId
+const hasValidProjectId = projectId && /^[a-z0-9-]+$/.test(projectId);
+
+export const client = hasValidProjectId
   ? createClient({
       projectId,
       dataset,
